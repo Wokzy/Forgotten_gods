@@ -1,5 +1,5 @@
 import random
-#import keyboard
+import keyboard
 import os
 from ElixirItem import *
 from Enemy import *

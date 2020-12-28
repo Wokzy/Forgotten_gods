@@ -7,14 +7,11 @@ from Shop import *
 from Home import *
 import Quests as quests
 import os
+import sys
 
-lcwd = os.getcwd()
-os.chdir('scripts')
 
+from cities import nircing
 from cities import kirt_arrosh
-from cities import nirsing
-
-os.chdir(lcwd)
 
 
 lcwd = os.getcwd()
@@ -84,19 +81,23 @@ class Kastomaki():
 				gf.update(l_char)
 				data_4.work_003_3(l_char, gf)
 			else: self.goto_center(l_char, gf)
-		elif ch == 7:
-			l_char.loc = 'Nircing'
-			gf.update(l_char)
-			nirsing.Nircing().play_menu(l_char, gf)
 		elif ch == 8:
+			return
+		elif ch == 7:
 			print('Выберите город:')
 			print('1 - Нирсинг')
-			print('2 - Выход')
-			сh = gf.player_ask_selection('', 1, 2)
+			print("2 - Кирт'Аррош")
+			print('3 - Выход')
+
+			ch = gf.player_ask_selection('', 1, 3)
 
 			if ch == 1:
-				l_char.loc = 'Нирсинг'
-			else: return
+				l_char.loc = 'Nircing'
+				nircing.Nircing().play_menu(l_char, gf)
+			elif ch == 2:
+				l_char.loc = "Кирт'Аррош"
+				kirt_arrosh.KirtArrosh().play_menu(l_char, gf)
+			#elif ch == 3: return
 
 	def ghetto(self, l_char, gf):
 		print("Вы пришли в трущобы.")
