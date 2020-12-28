@@ -11,12 +11,15 @@ from data_6 import *
 
 import Researching_city as rc
 
+from cities import nircing
+from cities import kirt_arrosh
+
 
 # В качестве защиты от пиратства можно использовать ключи, как в ssh.
 
 # - \n\t\
 
-VERSION = '0.5.0:48'
+VERSION = '0.5.1:48'
 GAME_NAME = 'Forgotten Gods'
 UPDATE_LOG = \
 '__0.5.0__\n\t\
@@ -83,7 +86,9 @@ def menu(l_char_):
 			l_char_.load_state(l_char_)
 			while True:
 				if l_char_.loc == 'Nircing':
-					rc.Nircing().play_menu(l_char_, gf)
+					nircing.Nircing().play_menu(l_char_, gf)
+				elif l_char_.loc == "Кирт'Аррош":
+					kirt_arrosh.KirtArrosh().play_menu(l_char_, gf)
 				else: gf.play_menu(l_char_, gf, 0)
 		elif ch == 3:
 			gf.show_game_info(GAME_NAME)

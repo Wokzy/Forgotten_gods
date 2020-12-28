@@ -70,5 +70,5 @@ class KirtArrosh():
 		else: return False
 
 	def choose_loc(self, l_char, gf):
-		print('')
-		print('')
+		pass
+		# TODO !

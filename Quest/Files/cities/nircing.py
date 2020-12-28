@@ -72,6 +72,8 @@ class Nircing:
 		print("2 - Кирт'Аррош")
 		print('3 - не отправляться')
 
+		ch = gf.player_ask_selection('', 1, 3)
+
 		if ch == 1:
 			l_char.loc = 0
 			return True
