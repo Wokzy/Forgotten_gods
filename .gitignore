@@ -1,2 +1,10 @@
 time.txt
 info.txt
+*.txt
+Quest
+*/__pycache__/
+Files/scripts/__pycache__/
+Files/quests_files/__pycache__/
+Files/cities/__pycache__/
+Files/__pycache__/
+Карта\ и\ наброски/PSD

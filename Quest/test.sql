@@ -1,6 +1,0 @@
-CREATE TABLE users(
-	id BIGINT NOT NULL AUTO_INCREMENT, 
-	nick VARCHAR(12), 
-	mail VARCHAR(30), 
-	game_exp BIGINT, 
-	PRIMARY KEY(id))
